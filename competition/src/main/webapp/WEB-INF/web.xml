@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/errorPage/NotFoundPage.jsp</location>
+  </error-page>
+  <servlet>
+    <servlet-name>kaptcha</servlet-name>
+    <servlet-class>
+      com.google.code.kaptcha.servlet.KaptchaServlet
+    </servlet-class>
+    <!-- 给验证码插件servlet类配置参数 -->
+    <!-- 边框设置 yes  no -->
+    <init-param>
+      <param-name>kaptcha.border</param-name>
+      <param-value>no</param-value>
+    </init-param>
+    <!-- 边框颜色 颜色名称 例如：red blue black等 也可以是 RGB：105,179,90 -->
+    <init-param>
+      <param-name>kaptcha.border.color</param-name>
+      <param-value>red</param-value>
+    </init-param>
+    <!-- 边框宽度 -->
+    <init-param>
+      <param-name>kaptcha.border.thickness</param-name>
+      <param-value>5</param-value>
+    </init-param>
+    <!-- 产生验证码的字符源头 兼容中文的 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.char.string</param-name>
+      <param-value>2345gapq2354asodf23452345ewry1254fktiuly7u12354o254ryhmn13254iu123klb</param-value>
+    </init-param>
+    <!-- 生成结果的字符个数 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.char.length</param-name>
+      <param-value>5</param-value>
+    </init-param>
+    <!-- 生成结果的字符字体 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.font.names</param-name>
+      <param-value>微软雅黑,宋体,楷体</param-value>
+    </init-param>
+    <!-- 生成结果的字符大小 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.font.size</param-name>
+      <param-value>50</param-value>
+    </init-param>
+    <!-- 生成结果的字符 颜色 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.font.color</param-name>
+      <param-value>blue</param-value>
+    </init-param>
+    <!-- 生成结果的字符 字间距 -->
+    <init-param>
+      <param-name>kaptcha.textproducer.char.space</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <!-- 干扰线 生成器 -->
+    <init-param>
+      <param-name>kaptcha.noise.impl</param-name>
+      <param-value>com.google.code.kaptcha.impl.DefaultNoise</param-value>
+    </init-param>
+    <!-- 干扰线 颜色 -->
+    <init-param>
+      <param-name>kaptcha.noise.color</param-name>
+      <param-value>BLACK</param-value>
+    </init-param>
+    <!-- 干扰线 背景渐变颜色  从左侧向右渐变  -->
+    <init-param>
+      <param-name>kaptcha.background.clear.from</param-name>
+      <param-value>green</param-value>
+    </init-param>
+    <!-- 干扰线 背景渐变颜色  从右侧向左渐变  -->
+    <init-param>
+      <param-name>kaptcha.background.clear.to</param-name>
+      <param-value>yellow</param-value>
+    </init-param>
+    <!-- 验证码图片宽度 -->
+    <init-param>
+      <param-name>kaptcha.image.width</param-name>
+      <param-value>200</param-value>
+    </init-param>
+    <!-- 验证码图片高度 -->
+    <init-param>
+      <param-name>kaptcha.image.height</param-name>
+      <param-value>50</param-value>
+    </init-param>
+  </servlet>
+  <!-- 验证码请求名  映射 -->
+  <servlet-mapping>
+    <servlet-name>kaptcha</servlet-name>
+    <url-pattern>/yzm</url-pattern>
+  </servlet-mapping>
+</web-app>

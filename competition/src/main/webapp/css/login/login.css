@@ -1,0 +1,49 @@
+#login{
+     /*璁剧疆杈规鐨勫ぇ灏�,绾挎潯,棰滆壊*/
+     border: 1px solid #999;
+     /*璁剧疆div鐨勫搴�*/
+     width: 50%;
+     /**div灞呬腑鏄剧ず**/
+     margin: auto;
+     /**margin padding鍏充簬css涓殑鐩掑瓙妯″瀷涓殑鍐呭**/
+     padding: 20px;
+     /**璺濈鐩搁偦鍏冪礌涓婅竟鐨勮窛绂绘槸50px**/
+     margin-top: 50px;
+     /*璁剧疆杈规涓哄渾瑙�*/
+     border-radius: 20px;
+
+     /*璁剧疆杈规鐨勯槾褰遍儴鍒�*/
+     box-shadow: 2px 2px 4px #000;
+ }
+
+#login_text{
+    /*璁剧疆瀛椾綋棰滆壊*/
+    color: white;
+    /*璁剧疆瀛椾綋闃村奖*/
+    text-shadow: 2px 2px 0px #000;
+    /*璁剧疆瀛椾綋鐨勫ぇ灏�*/
+    font-size: 30px;
+}
+.bgColor{
+    background: -webkit-linear-gradient(#333, black); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#333, black); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#333, black); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#333, black); /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈�鍚庯級 */
+}
+.lblWhite{
+    color: white;
+}
+.rightMenu{
+    position: sticky;
+    right: -120px;
+    z-index: 10;
+    border-radius: 10px 0px 0px 10px;
+    position: fixed;
+}
+.trStyle:hover{
+	background:#gray;
+	cursor:pointer;
+}
+.trStyle:hover>td{
+	border: 2px solid yellow;
+}

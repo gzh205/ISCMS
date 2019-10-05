@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="competition"
+  id="myeclipse.1551339093405"
+  context-root="/competition"
+  j2ee-spec="5.0"
+  archive="competition.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
